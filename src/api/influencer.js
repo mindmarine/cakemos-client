@@ -1,6 +1,7 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
+// create influencer
 export const createInfluencer = (influencer, user) => {
   console.log(influencer)
   return axios({
@@ -36,6 +37,17 @@ export const createInfluencer = (influencer, user) => {
         // tiktokengagement: influencer.tiktokengagement,
         // twitchengagement: influencer.twitchengagement
       }
+    }
+  })
+}
+
+// show influencer index
+export const influencerIndex = (user) => {
+  return axios({
+    url: apiUrl + '/influencers/',
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${user.token}`
     }
   })
 }

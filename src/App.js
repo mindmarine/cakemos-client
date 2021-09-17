@@ -12,6 +12,7 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 // Influencer specific import
 import CreateInfluencer from './components/influencer/CreateInfluencer'
+import ShowInfluencers from './components/influencer/ShowInfluencers'
 
 class App extends Component {
   constructor (props) {
@@ -91,6 +92,7 @@ class App extends Component {
 
           {/* Influencer routes */}
 
+          { /* Add influencer */ }
           <AuthenticatedRoute
             user={user}
             path='/add-influencer'
@@ -98,6 +100,16 @@ class App extends Component {
               <CreateInfluencer msgAlert={this.msgAlert} user={user} />
             )}
           />
+
+          {/* Influencers Index */}
+          <AuthenticatedRoute
+            user={user}
+            path='/show-influencers/'
+            render={() => (
+              <ShowInfluencers msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+
         </main>
       </Fragment>
     )

@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom'
 
 function DeleteInfluencer (influencer, props) {
   useEffect(() => {
-    const { msgAlert, history, user, post } = props
+    const { msgAlert, history, user } = props
     signOut(user)
       .then(() => {
         msgAlert({
