@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { signOut } from '../../api/auth'
-import { signOutSuccess } from '../AutoDismissAlert/messages'
+// import { signOut } from '../../api/auth'
+// import { signOutSuccess } from '../AutoDismissAlert/messages'
 
-function SignOut (props) {
+function DeleteInfluencer (influencer, props) {
   useEffect(() => {
-    const { msgAlert, history, clearUser, user } = props
+    const { msgAlert, history, user, post } = props
     signOut(user)
       .then(() => {
         msgAlert({

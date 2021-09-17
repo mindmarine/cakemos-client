@@ -10,6 +10,8 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+// Influencer specific import
+import CreateInfluencer from './components/influencer/CreateInfluencer'
 
 class App extends Component {
   constructor (props) {
@@ -84,6 +86,16 @@ class App extends Component {
             path='/change-password'
             render={() => (
               <ChangePassword msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+
+          {/* Influencer routes */}
+
+          <AuthenticatedRoute
+            user={user}
+            path='/add-influencer'
+            render={() => (
+              <CreateInfluencer msgAlert={this.msgAlert} user={user} />
             )}
           />
         </main>
