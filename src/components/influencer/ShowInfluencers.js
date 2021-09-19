@@ -51,6 +51,13 @@ function ShowInfluencers (props) {
       .catch(console.error)
   }, [])
 
+  // useEffect(() => {
+  //   const { user } = props
+  //   deleteInfluencer(user)
+  //     .then((res) => influencerIndex(res.data.influencers))
+  //     .catch(console.error)
+  // }, [])
+
   // const { user, msgAlert, history } = props
   // deleteInfluencer(user, influencerID)
   //   // Redirect to the influencers index
@@ -70,7 +77,7 @@ function ShowInfluencers (props) {
   //     })
   //   )
 
-  // console.log('Influencers are', typeof (influencers), influencers)
+  // const { user } = props
 
   const influencersList = influencers.map((influencer) => (
     <Col xs={12} md={6} lg={4} xl={4} key={influencer._id} style={cardCol}>
@@ -93,12 +100,7 @@ function ShowInfluencers (props) {
           </Link>
         </Button>
         {/* Delete Button */}
-        {/* <Button>
-          <Link to={{ pathname: `/delete-influencer/${influencer._id}` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2
-          </Link>
-        </Button> */}
-
-        {/* <Button id={`influencer${influencer._id}`} onClick={deleteInfluencer(user, influencer.id)} style={{ color: 'red', textDecoration: 'none' }}>Delete influencer</Button> */}
+        {/* <Button variant='danger' onClick={deleteInfluencer()}>Delete Influencer</Button> */}
 
       </Card>
     </Col>
