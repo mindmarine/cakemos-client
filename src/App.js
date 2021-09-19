@@ -12,7 +12,13 @@ import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 // Influencer specific import
 import CreateInfluencer from './components/influencer/CreateInfluencer'
+// Index Influencers import
 import ShowInfluencers from './components/influencer/ShowInfluencers'
+// Show One Influencer
+import ShowInfluencer from './components/influencer/ShowInfluencer'
+// Update One Influencer
+import UpdateInfluencer from './components/influencer/UpdateInfluencer'
+import UpdateInfluencerV2 from './components/influencer/UpdateInfluencerV2'
 
 class App extends Component {
   constructor (props) {
@@ -110,6 +116,41 @@ class App extends Component {
             )}
           />
 
+          {/* Show Influencer */}
+          <AuthenticatedRoute
+            user={user}
+            path='/show-influencer/:id'
+            render={() => (
+              <ShowInfluencer msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+
+          {/* Update Influencer */}
+          <AuthenticatedRoute
+            user={user}
+            path='/update-influencer/:id/edit'
+            render={() => (
+              <UpdateInfluencer msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+
+          {/* Update Influencer V2 */}
+          <AuthenticatedRoute
+            user={user}
+            path='/update-influencer/:id/editv2'
+            render={() => (
+              <UpdateInfluencerV2 msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+
+          {/* Delete Influencer */}
+          <AuthenticatedRoute
+            user={user}
+            path='/delete-influencer/:id/'
+            render={() => (
+              <UpdateInfluencerV2 msgAlert={this.msgAlert} user={user} />
+            )}
+          />
         </main>
       </Fragment>
     )

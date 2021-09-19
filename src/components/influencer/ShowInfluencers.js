@@ -6,6 +6,8 @@ import { Card, Col, Row } from 'react-bootstrap'
 // import { signUp, signIn } from '../../api/auth'
 // import { signUpSuccess, signUpFailure } from '../AutoDismissAlert/messages'
 
+import Button from 'react-bootstrap/Button'
+
 import { influencerIndex } from '../../api/influencer'
 
 const cardImg = {
@@ -39,7 +41,7 @@ const card = {
 // import Button from 'react-bootstrap/Button'
 
 function ShowInfluencers (props) {
-  // in order to be able to use the map method we need to set the state of influenders to an array from the beginning
+  // in order to be able to use the map method we need to set the state of influencers to an array from the beginning
   const [influencers, setInfluencers] = useState([])
 
   useEffect(() => {
@@ -49,12 +51,31 @@ function ShowInfluencers (props) {
       .catch(console.error)
   }, [])
 
+  // const { user, msgAlert, history } = props
+  // deleteInfluencer(user, influencerID)
+  //   // Redirect to the influencers index
+  //   .then(() => history.push('/show-influencers'))
+  //   .then(() =>
+  //     msgAlert({
+  //       heading: 'Influencer Deleted Successfully',
+  //       message: 'This influencer was removed',
+  //       variant: 'success'
+  //     })
+  //   )
+  //   .catch((err) =>
+  //     msgAlert({
+  //       heading: 'Influencer was not deleted',
+  //       message: 'Something went wrong: ' + err.message,
+  //       variant: 'danger'
+  //     })
+  //   )
+
   // console.log('Influencers are', typeof (influencers), influencers)
 
   const influencersList = influencers.map((influencer) => (
     <Col xs={12} md={6} lg={4} xl={4} key={influencer._id} style={cardCol}>
       <Card style={card} className='m-auto'>
-        <Link to={`/influencers/${influencer._id}`}>
+        <Link to={`/show-influencer/${influencer._id}`}>
           <Card.Body style={cardBody}>
             <Card.Img variant='top' src={`${influencer.profilephoto}`} style={cardImg} />
             <Card.Title style={cardTitle}>{influencer.username}</Card.Title>
@@ -66,6 +87,19 @@ function ShowInfluencers (props) {
             <Card.Text>username: {influencer.username}</Card.Text>
           </Card.Body>
         </Link>
+        {/* Update Button */}
+        <Button>
+          <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2
+          </Link>
+        </Button>
+        {/* Delete Button */}
+        {/* <Button>
+          <Link to={{ pathname: `/delete-influencer/${influencer._id}` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2
+          </Link>
+        </Button> */}
+
+        {/* <Button id={`influencer${influencer._id}`} onClick={deleteInfluencer(user, influencer.id)} style={{ color: 'red', textDecoration: 'none' }}>Delete influencer</Button> */}
+
       </Card>
     </Col>
   ))
