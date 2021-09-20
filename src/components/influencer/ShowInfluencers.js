@@ -8,7 +8,7 @@ import { Card, Col, Row } from 'react-bootstrap'
 
 import Button from 'react-bootstrap/Button'
 
-import { influencerIndex } from '../../api/influencer'
+import { influencerIndex, deleteInfluencer } from '../../api/influencer'
 
 const cardImg = {
   margin: 'auto',
@@ -51,12 +51,12 @@ function ShowInfluencers (props) {
       .catch(console.error)
   }, [])
 
-  // useEffect(() => {
-  //   const { user } = props
-  //   deleteInfluencer(user)
-  //     .then((res) => influencerIndex(res.data.influencers))
-  //     .catch(console.error)
-  // }, [])
+  useEffect(() => {
+    const { user } = props
+    deleteInfluencer(user)
+      .then((res) => influencerIndex(res.data.influencers))
+      .catch(console.error)
+  }, [])
 
   // const { user, msgAlert, history } = props
   // deleteInfluencer(user, influencerID)
@@ -100,7 +100,7 @@ function ShowInfluencers (props) {
           </Link>
         </Button>
         {/* Delete Button */}
-        {/* <Button variant='danger' onClick={deleteInfluencer()}>Delete Influencer</Button> */}
+        <Button variant='danger' onClick={deleteInfluencer()}>Delete Influencer</Button>
 
       </Card>
     </Col>
