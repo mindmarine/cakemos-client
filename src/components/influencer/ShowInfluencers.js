@@ -8,7 +8,7 @@ import { Card, Col, Row } from 'react-bootstrap'
 
 import Button from 'react-bootstrap/Button'
 
-import { influencerIndex } from '../../api/influencer'
+import { influencerIndex, deleteInfluencer } from '../../api/influencer'
 
 const cardImg = {
   margin: 'auto',
@@ -43,39 +43,40 @@ const card = {
 function ShowInfluencers (props) {
   // in order to be able to use the map method we need to set the state of influencers to an array from the beginning
   const [influencers, setInfluencers] = useState([])
+  // const [refreshinfluencers, setRefreshInfluencers] = useState(false)
+  const [deletedinfluencer, setDeletedInfluencer] = useState(false)
+
+  const onDeleteInfluencer = (influencerID) => {
+    deleteInfluencer(user, influencerID)
+      .then(() => setDeletedInfluencer(!deletedinfluencer))
+      // Redirect to the influencers index
+      // .then(() => history.push('/show-influencers'))
+      .then(() =>
+        msgAlert({
+          heading: 'Influencer Deleted Successfully',
+          message: 'This influencer was removed',
+          variant: 'success'
+        })
+      )
+      .catch((err) =>
+        msgAlert({
+          heading: 'Influencer was not deleted',
+          message: 'Something went wrong: ' + err.message,
+          variant: 'danger'
+        })
+      )
+  }
 
   useEffect(() => {
     const { user } = props
     influencerIndex(user)
       .then((res) => setInfluencers(res.data.influencers))
+      .then()
       .catch(console.error)
-  }, [])
+  }, [deletedinfluencer])
 
-  // useEffect(() => {
-  //   const { user } = props
-  //   deleteInfluencer(user)
-  //     .then((res) => influencerIndex(res.data.influencers))
-  //     .catch(console.error)
-  // }, [])
-
-  // const { user, msgAlert, history } = props
-  // deleteInfluencer(user, influencerID)
-  //   // Redirect to the influencers index
-  //   .then(() => history.push('/show-influencers'))
-  //   .then(() =>
-  //     msgAlert({
-  //       heading: 'Influencer Deleted Successfully',
-  //       message: 'This influencer was removed',
-  //       variant: 'success'
-  //     })
-  //   )
-  //   .catch((err) =>
-  //     msgAlert({
-  //       heading: 'Influencer was not deleted',
-  //       message: 'Something went wrong: ' + err.message,
-  //       variant: 'danger'
-  //     })
-  //   )
+  // function to delete influencer
+  const { user, msgAlert } = props
 
   // const { user } = props
 
@@ -94,15 +95,20 @@ function ShowInfluencers (props) {
             <Card.Text>username: {influencer.username}</Card.Text>
           </Card.Body>
         </Link>
-        {/* Update Button */}
-        <Button>
-          <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2
-          </Link>
-        </Button>
-        {/* Delete Button */}
-        {/* <Button variant='danger' onClick={deleteInfluencer()}>Delete Influencer</Button> */}
 
       </Card>
+
+      {/* Update Button */}
+      <Button>
+        <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2
+        </Link>
+      </Button>
+
+      {/* Delete Button */}
+      <Button
+        variant='danger' onClick={() => onDeleteInfluencer(influencer._id)}>Delete Influencer
+      </Button>
+
     </Col>
   ))
 

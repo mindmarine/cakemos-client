@@ -99,7 +99,7 @@ function CreateInfluencer (props) {
 
           {/* first name */}
           <Form.Group controlId="firstname">
-            <Form.Label>first name</Form.Label>
+            <Form.Label>(required) first name</Form.Label>
             <Form.Control
               required
               type="string"
@@ -114,7 +114,7 @@ function CreateInfluencer (props) {
 
           {/* last name */}
           <Form.Group controlId="lastname">
-            <Form.Label>last name</Form.Label>
+            <Form.Label>(required) last name</Form.Label>
             <Form.Control
               required
               type="string"
@@ -129,7 +129,7 @@ function CreateInfluencer (props) {
 
           {/* username */}
           <Form.Group controlId="username">
-            <Form.Label>last name</Form.Label>
+            <Form.Label>(required) username</Form.Label>
             <Form.Control
               required
               type="string"
@@ -146,7 +146,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="profilephoto">
             <Form.Label>Profile Photo</Form.Label>
             <Form.Control
-              required
               type="string"
               name="profilephoto"
               value={profilephoto}
@@ -161,7 +160,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="country">
             <Form.Label>Country</Form.Label>
             <Form.Control
-              required
               type="string"
               name="country"
               value={country}
@@ -176,7 +174,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="city">
             <Form.Label>City</Form.Label>
             <Form.Control
-              required
               type="string"
               name="city"
               value={city}
@@ -191,7 +188,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="Youtube">
             <Form.Label>Youtube</Form.Label>
             <Form.Control
-              required
               type="string"
               name="youtube"
               value={youtube}
@@ -206,7 +202,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="instagram">
             <Form.Label>instagram</Form.Label>
             <Form.Control
-              required
               type="string"
               name="instagram"
               value={instagram}
@@ -221,7 +216,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="twitter">
             <Form.Label>twitter</Form.Label>
             <Form.Control
-              required
               type="string"
               name="twitter"
               value={twitter}
@@ -236,7 +230,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="tiktok">
             <Form.Label>tiktok</Form.Label>
             <Form.Control
-              required
               type="string"
               name="tiktok"
               value={tiktok}
@@ -251,7 +244,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="twitch">
             <Form.Label>twitch</Form.Label>
             <Form.Control
-              required
               type="string"
               name="twitch"
               value={twitch}
@@ -266,7 +258,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="youtubeaudiencesize">
             <Form.Label>youtube audience size</Form.Label>
             <Form.Control
-              required
               type="string"
               name="youtubeaudiencesize"
               value={youtubeaudiencesize}
@@ -281,7 +272,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="instagramaudiencesize">
             <Form.Label>instagram audience size</Form.Label>
             <Form.Control
-              required
               type="string"
               name="instagramaudiencesize"
               value={instagramaudiencesize}
@@ -296,7 +286,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="twitteraudiencesize">
             <Form.Label>twitter audience size</Form.Label>
             <Form.Control
-              required
               type="string"
               name="twitteraudiencesize"
               value={twitteraudiencesize}
@@ -311,7 +300,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="tiktokaudiencesize">
             <Form.Label>tiktok audience size</Form.Label>
             <Form.Control
-              required
               type="string"
               name="tiktokaudiencesize"
               value={tiktokaudiencesize}
@@ -326,7 +314,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="twitchaudiencesize">
             <Form.Label>twitch audience size</Form.Label>
             <Form.Control
-              required
               type="string"
               name="twitchaudiencesize"
               value={twitchaudiencesize}
@@ -341,7 +328,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="topics">
             <Form.Label>topics</Form.Label>
             <Form.Control
-              required
               type="string"
               name="topics"
               value={topics}
@@ -356,7 +342,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="tags">
             <Form.Label>tags</Form.Label>
             <Form.Control
-              required
               type="string"
               name="tags"
               value={tags}
@@ -371,7 +356,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="youtubeengagement">
             <Form.Label>youtubeengagement</Form.Label>
             <Form.Control
-              required
               type="string"
               name="youtubeengagement"
               value={youtubeengagement}
@@ -386,7 +370,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="instagramengagement">
             <Form.Label>instagramengagement</Form.Label>
             <Form.Control
-              required
               type="string"
               name="instagramengagement"
               value={instagramengagement}
@@ -401,7 +384,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="twitterengagement">
             <Form.Label>twitterengagement</Form.Label>
             <Form.Control
-              required
               type="string"
               name="twitterengagement"
               value={twitterengagement}
@@ -416,7 +398,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="tiktokengagement">
             <Form.Label>tiktokengagement</Form.Label>
             <Form.Control
-              required
               type="string"
               name="tiktokengagement"
               value={tiktokengagement}
@@ -431,7 +412,6 @@ function CreateInfluencer (props) {
           <Form.Group controlId="twitchengagement">
             <Form.Label>twitchengagement</Form.Label>
             <Form.Control
-              required
               type="string"
               name="twitchengagement"
               value={twitchengagement}
