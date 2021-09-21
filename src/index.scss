@@ -1,4 +1,44 @@
-$primary: teal;
+$primary: white;
+$secondary: teal;
 $danger: #800020;
 
+$text-primary: blue;
+
+// .text-secondary
+
+// .text-success
+
+// .text-danger
+
+// .text-warning
+
+// .text-info
+
 @import "~bootstrap/scss/bootstrap";
+
+Button {
+    background-color: tomato;
+}
+
+.btn-primary {
+    background-color: teal;
+    color: whitesmoke;
+}
+
+.nav-link a:hover {
+    color: orange !important;
+}
+
+.photo {
+    background-color: whitesmoke;
+}
+
+.rowC {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-toggler {
+    background-color: teal;
+    color: white;
+}

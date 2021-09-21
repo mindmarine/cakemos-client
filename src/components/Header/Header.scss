@@ -1,0 +1,24 @@
+.navbar .navbar-nav > li > a,
+.navbar .navbar-nav > li > a:hover {
+    color: #fff;
+}
+
+#header {
+    background-color: white;
+    border-radius: 0 0 25px 25px;
+}
+
+.nav-link {
+    color: teal !important;
+    border-width: 2px;
+}
+
+.nav-link > a:hover {
+    color: #fff;
+}
+
+a.border {
+    border-style: solid;
+    border-color: #00f;
+    border-width: 5px;
+}

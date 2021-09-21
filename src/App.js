@@ -20,6 +20,7 @@ import ShowInfluencer from './components/influencer/ShowInfluencer'
 // Update One Influencer
 import UpdateInfluencer from './components/influencer/UpdateInfluencer'
 import UpdateInfluencerV2 from './components/influencer/UpdateInfluencerV2'
+import InfluencersTable from './components/influencer/InfluencerTable'
 
 class App extends Component {
   constructor (props) {
@@ -144,14 +145,15 @@ class App extends Component {
             )}
           />
 
-          {/* Delete Influencer */}
+          {/* Influencers Table */}
           <AuthenticatedRoute
             user={user}
-            path='/delete-influencer/:id/'
+            path='/influencerstable/'
             render={() => (
-              <UpdateInfluencerV2 msgAlert={this.msgAlert} user={user} />
+              <InfluencersTable msgAlert={this.msgAlert} user={user} />
             )}
           />
+
         </main>
       </Fragment>
     )

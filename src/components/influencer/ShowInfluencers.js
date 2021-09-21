@@ -9,12 +9,13 @@ import { Card, Col, Row } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 
 import { influencerIndex, deleteInfluencer } from '../../api/influencer'
+import cakemosprofile2 from '../../images/cakemosprofile2.png'
 
 const cardImg = {
   margin: 'auto',
-  padding: '25px',
+  padding: '5px',
   width: 'auto',
-  height: '200px'
+  height: '100px'
 }
 
 const cardCol = {
@@ -75,7 +76,7 @@ function ShowInfluencers (props) {
       .catch(console.error)
   }, [deletedinfluencer])
 
-  // function to delete influencer
+  // // function to delete influencer
   const { user, msgAlert } = props
 
   // const { user } = props
@@ -83,38 +84,44 @@ function ShowInfluencers (props) {
   const influencersList = influencers.map((influencer) => (
     <Col xs={12} md={6} lg={4} xl={4} key={influencer._id} style={cardCol}>
       <Card style={card} className='m-auto'>
-        <Link to={`/show-influencer/${influencer._id}`}>
-          <Card.Body style={cardBody}>
-            <Card.Img variant='top' src={`${influencer.profilephoto}`} style={cardImg} />
-            <Card.Title style={cardTitle}>{influencer.username}</Card.Title>
-            {/* <Card.Text>username: {influencer.firstname}</Card.Text>
-            <Card.Text>username: {influencer.username}</Card.Text> */}
-            <Card.Text>
-              {`Name: ${influencer.firstname} ${influencer.username}`}
-            </Card.Text>
-            <Card.Text>username: {influencer.username}</Card.Text>
-          </Card.Body>
-        </Link>
+
+        <Card.Body style={cardBody}>
+          {/* <Card.Img variant='top' src={ require(`../../images/${influencer.profilephoto}.jpeg`).ReactComponent } style={cardImg} /> */}
+          {/* <Card.Img variant='top' src={'../../src/images/influencerA.png'} style={cardImg} /> */}
+          {/* <Card.Img variant='top' src= { `${influencer.profilephoto}` } style={cardImg} /> */}
+          <Link to={`/show-influencer/${influencer._id}`}>
+            <Card.Img className="photo" variant='top' src={cakemosprofile2} style={cardImg}/>
+          </Link>
+          {/* Card Title */}
+          <Card.Title style={cardTitle}>{influencer.username}</Card.Title>
+          <Card.Text>
+            <p></p>
+            <p>{`Name: ${influencer.firstname} ${influencer.lastname}`}</p>
+            <p>Photo: {influencer.profilephoto}</p>
+            <p>Instagram: {influencer.instagram}</p>
+            <p>Instagram Audience: {influencer.instagramaudiencesize}</p>
+            <p>Instagram Engagement: {influencer.instagramaengagement}</p>
+          </Card.Text>
+          {/* Update Button */}
+          <Button>
+            <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update
+            </Link>
+          </Button>
+
+          {/* Delete Button */}
+          <Button
+            variant='danger' style={{ color: '#FFF', textDecoration: 'none' }} onClick={() => onDeleteInfluencer(influencer._id)}>Delete
+          </Button>
+        </Card.Body>
 
       </Card>
-
-      {/* Update Button */}
-      <Button>
-        <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2
-        </Link>
-      </Button>
-
-      {/* Delete Button */}
-      <Button
-        variant='danger' onClick={() => onDeleteInfluencer(influencer._id)}>Delete Influencer
-      </Button>
 
     </Col>
   ))
 
   return (
     <React.Fragment>
-      <h1>Hello World</h1>
+      <h1>Influencers</h1>
       {/* <li>{influencersList}</li> */}
       <Row>
         <h3 className='text-light'>Influencers</h3>
