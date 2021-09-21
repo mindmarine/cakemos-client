@@ -117,7 +117,8 @@ https://react-bootstrap.github.io/components/table/
 | influencer | /add-influencer               | POST   | this enable signed in users to make a post                           |
 | influencer | /show-influencers             | GET    | shows all influencers                                                |
 | influencer | /influencerstable             | GET    | shows influencers table                                              |
-| influencer | /update-influencer/:id/editv2 | PATCH  | update influencerposts                                               |
+| influencer | /update-influencer/:id/editv2 | PATCH  | update influencer                                              |
+| guest, user | /inspiration | GET  | Inspiration Page                                          |
 
 ### Back End (API) Routes
 | entity     | route path       | verb          | functionality              |
