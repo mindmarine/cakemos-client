@@ -1,6 +1,6 @@
 /* eslint-disable no-tabs */
 import React, { Component, Fragment } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
 
 import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
@@ -21,6 +21,8 @@ import ShowInfluencer from './components/influencer/ShowInfluencer'
 import UpdateInfluencer from './components/influencer/UpdateInfluencer'
 import UpdateInfluencerV2 from './components/influencer/UpdateInfluencerV2'
 import InfluencersTable from './components/influencer/InfluencerTable'
+
+import HomePageVideos from './components/Homepage/Homepage'
 
 class App extends Component {
   constructor (props) {
@@ -67,93 +69,103 @@ class App extends Component {
           />
         ))}
 	      <main className='container'>
-	        <Route
-            path='/sign-up'
-            render={() => (
-              <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
-            )}
-          />
-          <Route
-            path='/sign-in'
-            render={() => (
-              <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            path='/sign-out'
-            render={() => (
-              <SignOut
-                msgAlert={this.msgAlert}
-                clearUser={this.clearUser}
-                user={user}
-              />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            path='/change-password'
-            render={() => (
-              <ChangePassword msgAlert={this.msgAlert} user={user} />
-            )}
-          />
 
-          {/* Influencer routes */}
+          <Switch>
+	          <Route
+              path='/sign-up'
+              render={() => (
+                <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
+              )}
+            />
+            <Route
+              path='/sign-in'
+              render={() => (
+                <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
+              )}
+            />
 
-          { /* Add influencer */ }
-          <AuthenticatedRoute
-            user={user}
-            path='/add-influencer'
-            render={() => (
-              <CreateInfluencer msgAlert={this.msgAlert} user={user} />
-            )}
-          />
+            <Route
+              exact path='/'
+              render={() => (
+                <HomePageVideos />
+              )}
+            />
 
-          {/* Influencers Index */}
-          <AuthenticatedRoute
-            user={user}
-            path='/show-influencers/'
-            render={() => (
-              <ShowInfluencers msgAlert={this.msgAlert} user={user} />
-            )}
-          />
+            <AuthenticatedRoute
+              user={user}
+              exact path='/sign-out'
+              render={() => (
+                <SignOut
+                  msgAlert={this.msgAlert}
+                  clearUser={this.clearUser}
+                  user={user}
+                />
+              )}
+            />
+            <AuthenticatedRoute
+              user={user}
+              exact path='/change-password'
+              render={() => (
+                <ChangePassword msgAlert={this.msgAlert} user={user} />
+              )}
+            />
 
-          {/* Show Influencer */}
-          <AuthenticatedRoute
-            user={user}
-            path='/show-influencer/:id'
-            render={() => (
-              <ShowInfluencer msgAlert={this.msgAlert} user={user} />
-            )}
-          />
+            {/* Influencer routes */}
 
-          {/* Update Influencer */}
-          <AuthenticatedRoute
-            user={user}
-            path='/update-influencer/:id/edit'
-            render={() => (
-              <UpdateInfluencer msgAlert={this.msgAlert} user={user} />
-            )}
-          />
+            { /* Add influencer */ }
+            <AuthenticatedRoute
+              user={user}
+              exact path='/add-influencer'
+              render={() => (
+                <CreateInfluencer msgAlert={this.msgAlert} user={user} />
+              )}
+            />
 
-          {/* Update Influencer V2 */}
-          <AuthenticatedRoute
-            user={user}
-            path='/update-influencer/:id/editv2'
-            render={() => (
-              <UpdateInfluencerV2 msgAlert={this.msgAlert} user={user} />
-            )}
-          />
+            {/* Influencers Index */}
+            <AuthenticatedRoute
+              user={user}
+              exact path='/show-influencers/'
+              render={() => (
+                <ShowInfluencers msgAlert={this.msgAlert} user={user} />
+              )}
+            />
 
-          {/* Influencers Table */}
-          <AuthenticatedRoute
-            user={user}
-            path='/influencerstable/'
-            render={() => (
-              <InfluencersTable msgAlert={this.msgAlert} user={user} />
-            )}
-          />
+            {/* Show Influencer */}
+            <AuthenticatedRoute
+              user={user}
+              path='/show-influencer/:id'
+              render={() => (
+                <ShowInfluencer msgAlert={this.msgAlert} user={user} />
+              )}
+            />
 
+            {/* Update Influencer */}
+            <AuthenticatedRoute
+              user={user}
+              exact path='/update-influencer/:id/edit'
+              render={() => (
+                <UpdateInfluencer msgAlert={this.msgAlert} user={user} />
+              )}
+            />
+
+            {/* Update Influencer V2 */}
+            <AuthenticatedRoute
+              user={user}
+              exact path='/update-influencer/:id/editv2'
+              render={() => (
+                <UpdateInfluencerV2 msgAlert={this.msgAlert} user={user} />
+              )}
+            />
+
+            {/* Influencers Table */}
+            <AuthenticatedRoute
+              user={user}
+              exact path='/influencerstable/'
+              render={() => (
+                <InfluencersTable msgAlert={this.msgAlert} user={user} />
+              )}
+            />
+          </Switch>
         </main>
       </Fragment>
     )

@@ -1,9 +1,10 @@
+
 import './influencertable.scss'
 
 import React, { useState, useEffect } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 // import { withRouter } from 'react-router-dom'
-// import { Table } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 
 import Button from 'react-bootstrap/Button'
 
@@ -50,30 +51,45 @@ function InfluencersTable (props) {
 
   const influencersAsRows = influencers.map((influencer) => (
     // <Table responsive striped bordered hover size="sm">
-    <>
-      <tbody key={influencer._id}>
-        <tr className="tableable">
-          <td>{influencer._id}</td>
-          <td>{influencer.firstname}</td>
-          <td>{influencer.lastname}</td>
-          <td>{influencer.username}</td>
-          <td>
-            {/* Update Button */}
-            <Button>
-              <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2</Link>
-            </Button>
-          </td>
-          <td>
-            {/* Delete Button */}
-            <Button
-              variant='danger' onClick={() => onDeleteInfluencer(influencer._id)}>Delete
-            </Button>
-          </td>
-        </tr>
-
-      </tbody>
-    </>
+    <tbody key={influencer._id}>
+      <tr className="tableable" >
+        {/* <td>{influencer._id}</td> */}
+        <td className="tdclass">{influencer.instagram}</td>
+        <td>{influencer.firstname}</td>
+        <td>{influencer.lastname}</td>
+        <td>{influencer.topics}</td>
+        <td>{influencer.tags}</td>
+        <td>{influencer.instagramaudiencesize}</td>
+        <td>{influencer.instagramaengagement}</td>
+        <td>
+          {/* Update Button */}
+          <Button>
+            <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2</Link>
+          </Button>
+        </td>
+        <td>
+          {/* Delete Button */}
+          <Button
+            variant='danger' onClick={() => onDeleteInfluencer(influencer._id)}>Delete
+          </Button>
+        </td>
+      </tr>
+    </tbody>
   ))
+
+  const influencersFullTable = () => (
+    <Table striped bordered hover variant="primary">
+      <thead>
+        <tr>
+          <th>platform</th>
+          <th>@username</th>
+          <th>audience size</th>
+          <th>audience engagement</th>
+        </tr>
+      </thead>
+      {influencersAsRows}
+    </Table>
+  )
 
   //   let influencersAsTable =
   //   <>
@@ -92,6 +108,7 @@ function InfluencersTable (props) {
       <h1>Influencers Table</h1>
       {/* {influencersAsTable} */}
       {influencersAsRows}
+      {influencersFullTable}
     </React.Fragment>
   )
 }

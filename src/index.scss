@@ -24,6 +24,11 @@ Button {
     background-color: teal;
     color: whitesmoke;
 }
+.btn-primary :hover {
+    background-color: red !important;
+    color: whitesmoke;
+    border-width: 3px;
+}
 
 .nav-link a:hover {
     color: orange !important;
