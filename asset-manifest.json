@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/cakemos-client/static/css/main.2f43395f.chunk.css",
-    "main.js": "/cakemos-client/static/js/main.8b7245c9.chunk.js",
-    "main.js.map": "/cakemos-client/static/js/main.8b7245c9.chunk.js.map",
+    "main.css": "/cakemos-client/static/css/main.8e24563f.chunk.css",
+    "main.js": "/cakemos-client/static/js/main.9445df99.chunk.js",
+    "main.js.map": "/cakemos-client/static/js/main.9445df99.chunk.js.map",
     "runtime-main.js": "/cakemos-client/static/js/runtime-main.04f493f6.js",
     "runtime-main.js.map": "/cakemos-client/static/js/runtime-main.04f493f6.js.map",
-    "static/js/2.94381c6b.chunk.js": "/cakemos-client/static/js/2.94381c6b.chunk.js",
-    "static/js/2.94381c6b.chunk.js.map": "/cakemos-client/static/js/2.94381c6b.chunk.js.map",
+    "static/js/2.21b3bb2d.chunk.js": "/cakemos-client/static/js/2.21b3bb2d.chunk.js",
+    "static/js/2.21b3bb2d.chunk.js.map": "/cakemos-client/static/js/2.21b3bb2d.chunk.js.map",
     "index.html": "/cakemos-client/index.html",
-    "static/css/main.2f43395f.chunk.css.map": "/cakemos-client/static/css/main.2f43395f.chunk.css.map",
-    "static/js/2.94381c6b.chunk.js.LICENSE.txt": "/cakemos-client/static/js/2.94381c6b.chunk.js.LICENSE.txt"
+    "static/css/main.8e24563f.chunk.css.map": "/cakemos-client/static/css/main.8e24563f.chunk.css.map",
+    "static/js/2.21b3bb2d.chunk.js.LICENSE.txt": "/cakemos-client/static/js/2.21b3bb2d.chunk.js.LICENSE.txt",
+    "static/media/cakemos.4d48c4ce.png": "/cakemos-client/static/media/cakemos.4d48c4ce.png",
+    "static/media/cakemosprofile2.ecc13229.png": "/cakemos-client/static/media/cakemosprofile2.ecc13229.png"
   },
   "entrypoints": [
     "static/js/runtime-main.04f493f6.js",
-    "static/js/2.94381c6b.chunk.js",
-    "static/css/main.2f43395f.chunk.css",
-    "static/js/main.8b7245c9.chunk.js"
+    "static/js/2.21b3bb2d.chunk.js",
+    "static/css/main.8e24563f.chunk.css",
+    "static/js/main.9445df99.chunk.js"
   ]
 }
