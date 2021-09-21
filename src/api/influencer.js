@@ -3,7 +3,7 @@ import axios from 'axios'
 
 // create influencer
 export const createInfluencer = (influencer, user) => {
-  console.log(influencer)
+  // console.log(influencer)
   return axios({
     method: 'POST',
     url: apiUrl + '/influencers/',
@@ -104,7 +104,7 @@ export const influencerUpdate = (influencer, user, influencerID) => {
 
 // update influencer V2
 export const influencerUpdateV2 = (influencer, user, influencerID) => {
-  console.log(user)
+  // console.log(user)
   return axios({
     url: apiUrl + `/influencers/${influencerID}`,
     method: 'PATCH',
