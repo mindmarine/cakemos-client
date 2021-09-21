@@ -78,14 +78,11 @@ Note: Due to the first line of code in the server.js file, the default deploymen
 - choose a connection method (connect your application)
 1. select your driver and version: driver: node.js version: 4.0 or later
 2. Add your connection string into your application code
-`mongodb+srv://admin:<password>@cakemoscluster0.ieuly.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
-- in the terminal run: `heroku config:set DB_URI="<your-connection-string>"`, replacing the <password>
-- Ex: `heroku config:set DB_URI="mongodb+srv://admin:yellowpencil@cluster0.pygcn.mongodb.net/atlas_db_test?retryWrites=true&w=majority"`
 NOTE: You don't have a database at this point yet, but MongoDB will create it as soon as you use your application to create data. 
 So, in the example above, the atlas_db_test database will not exist until the first user is created via a sign-up.
 
 ## Client
-- download template and move to dedidcated proejct and client folder
+- download template and move to dedicated project and client folder
 - personalize template
 - `git init`
 - npm install
