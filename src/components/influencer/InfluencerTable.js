@@ -56,15 +56,15 @@ function InfluencersTable (props) {
         {/* <td>{influencer._id}</td> */}
         <td className="tdclass">{influencer.instagram}</td>
         <td>{influencer.firstname}</td>
-        <td>{influencer.lastname}</td>
+        {/* <td>{influencer.lastname}</td> */}
         <td>{influencer.topics}</td>
-        <td>{influencer.tags}</td>
+        {/* <td>{influencer.tags}</td> */}
         <td>{influencer.instagramaudiencesize}</td>
-        <td>{influencer.instagramaengagement}</td>
+        <td>{influencer.instagramengagement}</td>
         <td>
           {/* Update Button */}
           <Button>
-            <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update v2</Link>
+            <Link to={{ pathname: `/update-influencer/${influencer._id}/editv2` }} style={{ color: '#FFF', textDecoration: 'none' }}>Update</Link>
           </Button>
         </td>
         <td>

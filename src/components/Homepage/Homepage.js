@@ -7,7 +7,7 @@ function HomePageVideo () {
     <>
       <div className="video-wrapper">
 
-        <h1>Influencers marketing a $10bn industry?</h1>
+        <h1>Influencer marketing a $10bn industry?</h1>
         <h5>How Influencers have transformed modern marketing</h5>
         <ReactPlayer
           url="https://youtu.be/gbbEXnRG9d8?t=104"

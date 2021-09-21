@@ -26,6 +26,7 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
+    <NavLink to='/inspiration' className='nav-link'>Inspiration</NavLink>
     {/* <NavLink exact to='/' className='nav-link'>Home</NavLink> */}
     {/* Add logo another way */}
     {/* <Image src='../../images/cakemos.png' fluid /> */}

@@ -24,11 +24,12 @@ const cardCol = {
 }
 
 const cardTitle = {
-  height: '10px'
+  height: '20px'
 }
 
 const cardBody = {
-  backgroundColor: 'teal',
+  backgroundColor: '#004c4c',
+  border: '2px',
   // borderRadius: '0px 0px 8px 8px',
   color: '#FFF'
 }
@@ -96,11 +97,12 @@ function ShowInfluencers (props) {
           <Card.Title style={cardTitle}>{influencer.username}</Card.Title>
           <Card.Text>
             <p></p>
-            <p>{`Name: ${influencer.firstname} ${influencer.lastname}`}</p>
+            {/* <p>{`Name: ${influencer.firstname} ${influencer.lastname}`}</p> */}
+            <p>{`Name: ${influencer.firstname}`}</p>
             {/* <p>Photo: {influencer.profilephoto}</p> */}
             <p>Instagram: {influencer.instagram}</p>
             <p>Instagram Audience: {influencer.instagramaudiencesize}</p>
-            <p>Instagram Engagement: {influencer.instagramaengagement}</p>
+            <p>Instagram Engagement: {influencer.instagramengagement}</p>
           </Card.Text>
           {/* Update Button */}
           <Button>
@@ -124,7 +126,7 @@ function ShowInfluencers (props) {
       <h1>Influencers</h1>
       {/* <li>{influencersList}</li> */}
       <Row>
-        <h3 className='text-light'>Influencers</h3>
+        {/* <h3 className='text-primary'>Influencers</h3> */}
         <Col xs={12} style={{ marginTop: '10px' }}>
           <Row>{influencersList}</Row>
         </Col>

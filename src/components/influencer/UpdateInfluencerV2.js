@@ -83,7 +83,7 @@ render () {
 
           {/* last name */}
           <Form.Group controlId="lastname">
-            <Form.Label>(required) last name</Form.Label>
+            <Form.Label>last name</Form.Label>
             <Form.Control
               // required
               type="string"

@@ -23,6 +23,7 @@ import UpdateInfluencerV2 from './components/influencer/UpdateInfluencerV2'
 import InfluencersTable from './components/influencer/InfluencerTable'
 
 import HomePageVideos from './components/Homepage/Homepage'
+import Inspiration from './components/Inspiration/Inspiration'
 
 class App extends Component {
   constructor (props) {
@@ -163,6 +164,14 @@ class App extends Component {
               exact path='/influencerstable/'
               render={() => (
                 <InfluencersTable msgAlert={this.msgAlert} user={user} />
+              )}
+            />
+
+            {/* Inspiration */}
+            <Route
+              path='/inspiration'
+              render={() => (
+                <Inspiration/>
               )}
             />
           </Switch>
