@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/cakemos-client/static/css/main.d73dacda.chunk.css",
-    "main.js": "/cakemos-client/static/js/main.c5ef0453.chunk.js",
-    "main.js.map": "/cakemos-client/static/js/main.c5ef0453.chunk.js.map",
+    "main.css": "/cakemos-client/static/css/main.c1f6d426.chunk.css",
+    "main.js": "/cakemos-client/static/js/main.72f34a14.chunk.js",
+    "main.js.map": "/cakemos-client/static/js/main.72f34a14.chunk.js.map",
     "runtime-main.js": "/cakemos-client/static/js/runtime-main.04f493f6.js",
     "runtime-main.js.map": "/cakemos-client/static/js/runtime-main.04f493f6.js.map",
-    "static/js/2.a12d525d.chunk.js": "/cakemos-client/static/js/2.a12d525d.chunk.js",
-    "static/js/2.a12d525d.chunk.js.map": "/cakemos-client/static/js/2.a12d525d.chunk.js.map",
+    "static/js/2.c0971afd.chunk.js": "/cakemos-client/static/js/2.c0971afd.chunk.js",
+    "static/js/2.c0971afd.chunk.js.map": "/cakemos-client/static/js/2.c0971afd.chunk.js.map",
     "index.html": "/cakemos-client/index.html",
-    "static/css/main.d73dacda.chunk.css.map": "/cakemos-client/static/css/main.d73dacda.chunk.css.map",
-    "static/js/2.a12d525d.chunk.js.LICENSE.txt": "/cakemos-client/static/js/2.a12d525d.chunk.js.LICENSE.txt",
+    "static/css/main.c1f6d426.chunk.css.map": "/cakemos-client/static/css/main.c1f6d426.chunk.css.map",
+    "static/js/2.c0971afd.chunk.js.LICENSE.txt": "/cakemos-client/static/js/2.c0971afd.chunk.js.LICENSE.txt",
     "static/media/cakemos.4d48c4ce.png": "/cakemos-client/static/media/cakemos.4d48c4ce.png",
-    "static/media/cakemosprofile2.ecc13229.png": "/cakemos-client/static/media/cakemosprofile2.ecc13229.png"
+    "static/media/cakemosprofile2.ecc13229.png": "/cakemos-client/static/media/cakemosprofile2.ecc13229.png",
+    "static/media/carlsen1.37fe3d6c.jpeg": "/cakemos-client/static/media/carlsen1.37fe3d6c.jpeg",
+    "static/media/chess1.4e4c823f.jpeg": "/cakemos-client/static/media/chess1.4e4c823f.jpeg",
+    "static/media/chess2.cd79da8e.png": "/cakemos-client/static/media/chess2.cd79da8e.png",
+    "static/media/chess3.b25e01c2.jpeg": "/cakemos-client/static/media/chess3.b25e01c2.jpeg",
+    "static/media/emmaraducanu1.d38d618a.jpeg": "/cakemos-client/static/media/emmaraducanu1.d38d618a.jpeg",
+    "static/media/emmaraducanu2.41ce8994.jpeg": "/cakemos-client/static/media/emmaraducanu2.41ce8994.jpeg",
+    "static/media/emmaraducanu3.9ac49197.jpeg": "/cakemos-client/static/media/emmaraducanu3.9ac49197.jpeg",
+    "static/media/hikaru1.1bf7d8a1.jpeg": "/cakemos-client/static/media/hikaru1.1bf7d8a1.jpeg",
+    "static/media/hikaru2.e0c62118.jpeg": "/cakemos-client/static/media/hikaru2.e0c62118.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.04f493f6.js",
-    "static/js/2.a12d525d.chunk.js",
-    "static/css/main.d73dacda.chunk.css",
-    "static/js/main.c5ef0453.chunk.js"
+    "static/js/2.c0971afd.chunk.js",
+    "static/css/main.c1f6d426.chunk.css",
+    "static/js/main.72f34a14.chunk.js"
   ]
 }
