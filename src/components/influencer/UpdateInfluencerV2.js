@@ -85,7 +85,7 @@ render () {
           <Form.Group controlId="lastname">
             <Form.Label>(required) last name</Form.Label>
             <Form.Control
-              required
+              // required
               type="string"
               name="lastname"
               value={influencer.lastname}

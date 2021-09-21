@@ -97,7 +97,7 @@ function ShowInfluencers (props) {
           <Card.Text>
             <p></p>
             <p>{`Name: ${influencer.firstname} ${influencer.lastname}`}</p>
-            <p>Photo: {influencer.profilephoto}</p>
+            {/* <p>Photo: {influencer.profilephoto}</p> */}
             <p>Instagram: {influencer.instagram}</p>
             <p>Instagram Audience: {influencer.instagramaudiencesize}</p>
             <p>Instagram Engagement: {influencer.instagramaengagement}</p>
